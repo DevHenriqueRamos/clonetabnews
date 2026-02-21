@@ -1,0 +1,39 @@
+/* RESET BASE - Next.js 13 (Pages Router) */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: #000; /* combina com seu projeto */
+  color: #fff;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}

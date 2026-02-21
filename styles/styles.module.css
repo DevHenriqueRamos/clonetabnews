@@ -1,0 +1,145 @@
+.container {
+  background: black;
+  color: #00ffcc;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  text-align: center;
+  overflow: hidden;
+}
+
+.startScreen {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.startScreen button {
+  padding: 14px 28px;
+  background: #00ffcc;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.activeScreen {
+  font-size: 1.5rem;
+}
+
+.terminalWrapper {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: left;
+  width: 600px;
+  max-width: 90%;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.rainCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hiddenPlayer {
+  display: none;
+}
+
+.soloReveal {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: epicReveal 2s ease forwards;
+}
+
+.soloReveal h1 {
+  font-size: 4rem;
+  letter-spacing: 8px;
+}
+
+.soloReveal h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+@keyframes epicReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.flash {
+  position: fixed;
+  inset: 0;
+  background: white;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.shake {
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px);
+  }
+  25% {
+    transform: translate(3px, -3px);
+  }
+  50% {
+    transform: translate(-3px, 3px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+.systemReady {
+  color: #00ff88;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
